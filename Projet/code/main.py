@@ -4,10 +4,7 @@ import eternity_puzzle
 import solver_random
 import solver_heuristic
 import solver_local_search
-import solver_benchmark
 import solver_advanced
-import leandre
-
 
 def parse_arguments():
     parser = argparse.ArgumentParser()
@@ -51,12 +48,6 @@ if __name__ == '__main__':
     elif args.agent == "advanced":
         # Your nice agent (Phase 3 - main part of the project)
         solution, n_conflict = solver_advanced.solve_advanced(e)
-    elif args.agent == "benchmark":
-        # Your nice agent (Phase 3 - main part of the project)
-        solution, n_conflict = solver_benchmark.solve_advanced(e)
-    elif args.agent == "leandre":
-        # Your nice agent (Phase 3 - main part of the project)
-        solution, n_conflict = leandre.solve_advanced(e)
     else:
         raise Exception("This agent does not exist")
     solving_time = round((time.time() - start_time) / 60,2)

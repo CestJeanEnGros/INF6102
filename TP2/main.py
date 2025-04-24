@@ -1,7 +1,6 @@
 import argparse
 import solver_naive
 import solver_advanced
-import solver_essai
 import time
 from utils import Instance, Solution
 
@@ -40,10 +39,6 @@ if __name__ == '__main__':
     elif args.agent == "advanced":
         # Your nice agent
         solution = solver_advanced.solve(instance)
-    elif args.agent == "essai":
-        # Your nice agent
-        solution = solver_essai.solve(instance)
-
     else:
         raise Exception("This agent does not exist")
 
